@@ -1,3 +1,4 @@
+import pandas as pd
 from fastapi import FastAPI
 from pydantic import BaseModel
 import joblib
@@ -34,3 +35,19 @@ class CustomerData(BaseModel):
     pdays: int
     previous: int
     poutcome: str
+
+@app.post("/predict")
+def predict_conversion(customer: CustomerData):
+    # Convert the customer input into the format expected by the model
+    customer_df = pd.DataFrame([customer.model_dump()])
+
+    # Generate the customer's conversion probability
+    probability = model.predict_proba(customer_df)[:, 1][0]
+
+    # Apply the targeting threshold selected during model evaluation
+    target_customer = probability >= threshold
+
+    return {
+        "conversion_probability": round(float(probability), 3),
+        "target_customer": bool(target_customer)
+    }
