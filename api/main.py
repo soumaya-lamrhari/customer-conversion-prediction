@@ -35,7 +35,8 @@ class CustomerData(BaseModel):
     pdays: int
     previous: int
     poutcome: str
-
+    
+# Predict whether a customer should be prioritized for marketing outreach
 @app.post("/predict")
 def predict_conversion(customer: CustomerData):
     # Convert the customer input into the format expected by the model
