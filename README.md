@@ -95,6 +95,12 @@ At the default threshold, XGBoost achieved better recall, F1-score, ROC-AUC, and
 
 XGBoost was therefore selected as the final model.
 
+### Model Comparison Visualization
+
+The chart below compares Logistic Regression and XGBoost on the held-out test set. XGBoost achieved higher ROC-AUC, PR-AUC, and F1-score. F1-scores were calculated using the default 0.50 classification threshold.
+
+![Model Performance Comparison](images/model_comparison.png)
+
 ## Targeting Strategy
 
 A default classification threshold of 0.50 is not necessarily the most useful threshold for a marketing prioritization problem.
