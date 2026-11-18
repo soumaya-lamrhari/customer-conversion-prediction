@@ -1,1 +1,8 @@
+-r requirements.txt
 
+numpy
+matplotlib
+seaborn
+shap
+ucimlrepo
+jupyter
