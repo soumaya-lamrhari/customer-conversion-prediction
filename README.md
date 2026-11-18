@@ -134,7 +134,7 @@ The chart below shows the ten features with the highest mean absolute SHAP value
 
 ![Top 10 SHAP Feature Importance](images/shap_feature_importance.png)
 
-## REST API
+## REST API 
 
 The trained preprocessing and XGBoost pipeline, together with the selected **0.20 targeting threshold**, is serialized with Joblib and served through FastAPI.
 
