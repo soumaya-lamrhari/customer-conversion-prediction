@@ -249,6 +249,38 @@ Then open the interactive API documentation:
 http://127.0.0.1:8000/docs
 ```
 
+## Reproducing the Analysis
+
+To reproduce the data exploration, preprocessing, model training, evaluation, and SHAP analysis:
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/soumaya-lamrhari/customer-conversion-prediction.git
+   cd customer-conversion-prediction
+   ```
+
+2. Install the notebook dependencies:
+
+   ```bash
+   pip install -r requirements-notebooks.txt
+   ```
+
+3. Open Jupyter Notebook:
+
+   ```bash
+   jupyter notebook
+   ```
+
+4. Run the notebooks in this order:
+
+   - `notebooks/1_data_exploration.ipynb`
+   - `notebooks/2_data_preprocessing.ipynb`
+   - `notebooks/3_modeling.ipynb`
+   - `notebooks/4_model_explainability.ipynb`
+
+The dataset is loaded directly from the UCI Machine Learning Repository using `ucimlrepo`.
+
 ## Key Takeaway
 
 This project demonstrates an end-to-end machine learning workflow, from exploratory data analysis and leakage prevention to model evaluation, threshold selection, explainability, API development, and public deployment.
