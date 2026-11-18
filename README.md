@@ -128,6 +128,12 @@ Individual SHAP explanations were also used to understand why specific customers
 
 These patterns describe relationships learned by the model and should not be interpreted as causal effects.
 
+### Top 10 Most Influential Features
+
+The chart below shows the ten features with the highest mean absolute SHAP values across the test set. Larger values indicate greater influence on the model's predictions, regardless of direction.
+
+![Top 10 SHAP Feature Importance](images/shap_feature_importance.png)
+
 ## REST API
 
 The trained preprocessing and XGBoost pipeline, together with the selected **0.20 targeting threshold**, is serialized with Joblib and served through FastAPI.
