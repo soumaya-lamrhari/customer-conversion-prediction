@@ -122,6 +122,16 @@ This shows how the model can be used as a prioritization tool: marketing efforts
 
 These results represent model performance on held-out test data and should not be interpreted as measured campaign cost savings or causal business impact.
 
+### Customer Targeting Results
+
+The chart below illustrates the final XGBoost model's targeting performance on the held-out test set using a probability threshold of 0.20.
+
+![Customer Targeting Strategy](images/targeting_strategy.png)
+
+By selecting 12.6% of customers for outreach, the model identified 51.4% of actual converters.
+
+These results demonstrate the potential of using machine learning to prioritize marketing outreach. They represent offline model evaluation rather than measured results from a real marketing campaign.
+
 ## Model Explainability
 
 SHAP was used to understand both overall model behavior and individual predictions.
